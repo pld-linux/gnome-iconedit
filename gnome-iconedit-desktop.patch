@@ -1,13 +1,12 @@
 --- gnome-iconedit-1.2.0/gnome-iconedit.desktop.orig	Thu Mar  9 14:22:25 2000
 +++ gnome-iconedit-1.2.0/gnome-iconedit.desktop	Wed Dec 17 20:54:09 2003
-@@ -1,17 +1,21 @@
+@@ -1,15 +1,21 @@
  [Desktop Entry]
  Name=GNOME Icon Editor 
  Name[de]=GNOME-Iconeditor
 -Name[uk]=GNOME Редактор п╕ктограм
 -Name[ko]=╠вЁП ╬фюлдэ фМаЩ╠Б 
 -Name[ru]=Редактор иконок
--Name[tr]=Gnome ikona editЖrЭ
 +Name[ko]=Й╥╦К├┬ Л∙└Л²╢Л╫≤ М▌╦Л╖▒Й╦╟ 
 +Name[pl]=Edytor ikon GNOME
 +Name[ru]=п═п╣п╢п╟п╨я┌п╬я─ п╦п╨п╬п╫п╬п╨
@@ -18,7 +17,6 @@
 -Comment[uk]=Редактор п╕ктограм
 -Comment[ko]=╬фюлдэю╩ фМаЩгу╢о╢ы
 -Comment[ru]=Редактор иконок для GNOME
--Comment[tr]=IkonalarЩ deПiЧtirir
 +Comment[ko]=Л∙└Л²╢Л╫≤Л²└ М▌╦Л╖▒М∙╘К▀┬К▀╓
 +Comment[pl]=Edytor ikon dla GNOME
 +Comment[ru]=п═п╣п╢п╟п╨я┌п╬я─ п╦п╨п╬п╫п╬п╨ п╢п╩я▐ GNOME
