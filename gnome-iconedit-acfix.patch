@@ -1,0 +1,39 @@
+--- gnome-iconedit-1.0.6/configure.in.orig	Fri Jul  4 15:47:21 2003
++++ gnome-iconedit-1.0.6/configure.in	Fri Jul  4 15:49:36 2003
+@@ -18,20 +18,20 @@
+ 
+ dnl Test for libz
+ AC_CHECK_LIB(z, inflate,
+-	AC_CHECK_HEADER(zlib.h,
+-		Z_LIBS="-lz"))
++	[AC_CHECK_HEADER(zlib.h,
++		Z_LIBS="-lz")])
+ AC_CHECK_LIB(z, compress, Z_LIBS="-lz",
+-	AC_MSG_ERROR([[
++	[AC_MSG_ERROR([[
+ *** Incorrect libz version found. Please make sure you do not have
+ *** an outdated libz.a or libz.so hiding in your X11 distribution or
+ *** elsewhere on your system. Versions of libz with the "compress" and
+-*** "uncompress" symbols are sufficiently recent to build GNOME Icon-Edit.]]))
++*** "uncompress" symbols are sufficiently recent to build GNOME Icon-Edit.]])])
+ 
+ dnl Test for libpng
+ AC_CHECK_LIB(png, png_write_info,
+-	AC_CHECK_HEADER(png.h,
++	[AC_CHECK_HEADER(png.h,
+ 	png_ok=yes,
+-	png_ok=no),,$Z_LIBS -lm)
++	png_ok=no)],,$Z_LIBS -lm)
+ if test "$png_ok" = yes; then
+ 	AC_MSG_CHECKING([for png_structp in png.h])
+ 	AC_TRY_COMPILE([#include <png.h>],
+@@ -71,7 +71,7 @@
+ fi
+ 
+-ALL_LINGUAS="de en_GB fr ko ru sv tr wa"
+-AM_GNOME_GETTEXT
++ALL_LINGUAS="de en_GB fr ko sv tr wa"
++AM_GNU_GETTEXT
+ 
+ AC_SUBST(CFLAGS)
+ AC_SUBST(CPPFLAGS)
