@@ -1,0 +1,57 @@
+diff -Nru gnome-iconedit-1.0.6/configure gnome-iconedit-1.0.6.new/configure
+--- gnome-iconedit-1.0.6/configure	Thu Feb 24 18:28:28 2000
++++ gnome-iconedit-1.0.6.new/configure	Sat May  6 17:57:36 2000
+@@ -2301,7 +2301,7 @@
+ #include "confdefs.h"
+ 
+ #include <stdio.h>
+-#include <gdk_pixbuf.h>
++#include <gdk-pixbuf/gdk-pixbuf.h>
+ 
+ int main() {
+  return 0; 
+diff -Nru gnome-iconedit-1.0.6/src/app.c gnome-iconedit-1.0.6.new/src/app.c
+--- gnome-iconedit-1.0.6/src/app.c	Wed Feb 23 02:25:44 2000
++++ gnome-iconedit-1.0.6.new/src/app.c	Sat May  6 17:57:36 2000
+@@ -483,7 +483,7 @@
+   GdkGC *gc;
+ 
+   if (grid->width >= 20 && grid->height >= 20)
+-    minipb = gdk_pixbuf_scale_simple (grid->pixbuf, 20, 20, ART_FILTER_NEAREST);
++    minipb = gdk_pixbuf_scale_simple (grid->pixbuf, 20, 20, GDK_INTERP_NEAREST);
+   else
+     {
+       minipb = grid->pixbuf;
+diff -Nru gnome-iconedit-1.0.6/src/edit.c gnome-iconedit-1.0.6.new/src/edit.c
+--- gnome-iconedit-1.0.6/src/edit.c	Wed Feb 23 20:26:31 2000
++++ gnome-iconedit-1.0.6.new/src/edit.c	Sat May  6 17:57:36 2000
+@@ -208,7 +208,7 @@
+     }
+ 
+   /* Make a gdk-pixbuf */
+-  pb = gdk_pixbuf_new_from_data (buf, ART_PIX_RGB, TRUE,
++  pb = gdk_pixbuf_new_from_data (buf, GDK_COLORSPACE_RGB, TRUE, 8,
+ 				 pbuffer->width, pbuffer->height,
+ 				 pbuffer->rowstride, NULL, NULL);
+   pbuffer->pixbuf = pb;
+diff -Nru gnome-iconedit-1.0.6/src/grid.c gnome-iconedit-1.0.6.new/src/grid.c
+--- gnome-iconedit-1.0.6/src/grid.c	Thu Feb 24 19:37:11 2000
++++ gnome-iconedit-1.0.6.new/src/grid.c	Sat May  6 17:57:36 2000
+@@ -71,7 +71,7 @@
+   
+   g->height = height;
+ 
+-  g->pixbuf = gdk_pixbuf_new (ART_PIX_RGB, TRUE, 8, width, height);
++  g->pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, width, height);
+   /* Clear the pixbuf. */
+   memset (gdk_pixbuf_get_pixels (g->pixbuf), 0x00, width * height * 4);
+ 
+@@ -243,7 +243,7 @@
+ 	  }
+     }
+ 
+-  new_pb = gdk_pixbuf_new_from_data (buf, ART_PIX_RGB, TRUE,
++  new_pb = gdk_pixbuf_new_from_data (buf, GDK_COLORSPACE_RGB, TRUE, 8,
+ 				     w, h, w * 4,
+ 				     NULL, NULL);
+ 
