@@ -2,7 +2,7 @@ Summary:	GNOME Icon Editor
 Summary(pl):	Edytor ikon dla GNOME
 Name:		gnome-iconedit
 Version:	1.0.6
-Release:	7
+Release:	8
 License:	GPL
 Group:		X11/Applications/Graphics
 Group(de):	X11/Applikationen/Grafik
@@ -12,6 +12,8 @@ Source0:	http://www.abdn.ac.uk/~u07ih/gnome-iconedit/%{name}-%{version}.tar.gz
 Patch0:		%{name}-gdk_pixbuf.patch
 Patch1:		%{name}-cleanfiles.patch
 Patch2:		%{name}-macros.patch
+Patch3:		%{name}-acfix.patch
+Patch4:		%{name}-desktop.patch
 URL:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/
 Buildrequires:	autoconf
 Buildrequires:	automake
@@ -38,6 +40,8 @@ tworzyæ proste ikony lub kursory.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 gettextize --copy --force
@@ -54,8 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	desktopdir=%{_applnkdir}/Graphics
 
-gzip -9nf AUTHORS ChangeLog NEWS README
-
 %find_lang %{name}
 
 %clean
@@ -63,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/CORBA/servers/*
 %{_datadir}/gnome/help/gnome-iconedit
