@@ -5,10 +5,10 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Group(pl):	X11/Aplikacje/Grafika
-Source:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/%{name}-%{version}.tar.gz
-Patch:		gnome-iconedit-applnk.patch
+Source0:	http://www.abdn.ac.uk/~u07ih/gnome-iconedit/%{name}-%{version}.tar.gz
+Patch0:		gnome-iconedit-gdk_pixbuf.patch
 URL:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/
-Buildrequires:	gdk-pixbuf-devel
+Buildrequires:	gdk-pixbuf-devel >= 0.7.0
 Buildrequires:	libpng-devel
 Buildrequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,9 +19,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GNOME Icon Editor.
 
-GNOME-Iconedit is a simple icon editor for the GNOME desktop environment. It
-is not as powerful as the wonderful GIMP, but has enough features to create
-simple icons or cursors.
+GNOME-Iconedit is a simple icon editor for the GNOME desktop environment.
+It is not as powerful as the wonderful GIMP, but has enough features to
+create simple icons or cursors.
 
 %prep
 %setup -q
@@ -37,7 +37,9 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make DESTDIR=$RPM_BUILD_ROOT install
+make install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	desktopdir=%{_applnkdir}/Graphics
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
