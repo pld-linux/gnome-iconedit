@@ -37,7 +37,7 @@ proste ikony lub kursory.
 %patch2 -p1
 
 %build
-gettextize --copy --force
+%{__gettextize}
 aclocal -I %{_aclocaldir}/gnome
 %{__autoconf}
 %{__automake}
