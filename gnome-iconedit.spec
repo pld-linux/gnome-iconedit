@@ -19,9 +19,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GNOME Icon Editor.
 
-GNOME-Iconedit is a simple icon editor for the GNOME desktop environment.
-It is not as powerful as the wonderful GIMP, but has enough features to
-create simple icons or cursors.
+GNOME-Iconedit is a simple icon editor for the GNOME desktop
+environment. It is not as powerful as the wonderful GIMP, but has
+enough features to create simple icons or cursors.
 
 %prep
 %setup -q
