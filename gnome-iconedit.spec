@@ -8,6 +8,7 @@ Group:		X11/Applications/Graphics
 Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
 Source0:	http://www.abdn.ac.uk/~u07ih/gnome-iconedit/%{name}-%{version}.tar.gz
+# Source0-md5:	98c84ce38d93e9f6036074db47ab444b
 Patch0:		%{name}-gdk_pixbuf.patch
 Patch1:		%{name}-cleanfiles.patch
 Patch2:		%{name}-macros.patch
