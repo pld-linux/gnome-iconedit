@@ -1,4 +1,5 @@
 Summary:	GNOME Icon Editor
+Summary(pl):	Edytor ikon dla GNOME
 Name:		gnome-iconedit
 Version:	1.0.6
 Release:	6
@@ -22,11 +23,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sysconfdir	/etc/X11/GNOME
 
 %description
-GNOME Icon Editor.
-
 GNOME-Iconedit is a simple icon editor for the GNOME desktop
 environment. It is not as powerful as the wonderful GIMP, but has
 enough features to create simple icons or cursors.
+
+%description -l pl
+GNOME-Iconedit to prosty edytor ikon dla ¶rodowiska GNOME. Nie jest
+tak potê¿ny jak wspania³y GIMP, ale mo¿e wystarczaj±co du¿o by
+tworzyæ proste ikony lub kursory.
 
 %prep
 %setup -q
