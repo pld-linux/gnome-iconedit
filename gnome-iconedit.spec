@@ -2,7 +2,7 @@ Summary:	GNOME Icon Editor
 Summary(pl):	Edytor ikon dla GNOME
 Name:		gnome-iconedit
 Version:	1.0.6
-Release:	6
+Release:	7
 License:	GPL
 Group:		X11/Applications/Graphics
 Group(de):	X11/Applikationen/Grafik
