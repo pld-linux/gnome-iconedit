@@ -10,12 +10,14 @@ Source0:	http://www.abdn.ac.uk/~u07ih/gnome-iconedit/%{name}-%{version}.tar.gz
 Patch0:		%{name}-gdk_pixbuf.patch
 Patch1:		%{name}-cleanfiles.patch
 Patch2:		%{name}-macros.patch
+Patch3:		%{name}-acfix.patch
+Patch4:		%{name}-c.patch
 URL:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gdk-pixbuf-devel >= 0.7.0
 BuildRequires:	gettext-devel
-BuildRequires:	libpng >= 1.0.8
+BuildRequires:	libpng-devel >= 1.0.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
@@ -35,6 +37,8 @@ proste ikony lub kursory.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 %{__gettextize}
@@ -42,6 +46,7 @@ proste ikony lub kursory.
 %{__autoconf}
 %{__automake}
 %configure
+
 %{__make}
 
 %install
@@ -51,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	desktopdir=%{_applnkdir}/Graphics
 
-%find_lang %{name}
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -61,6 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/CORBA/servers/*
-%{_datadir}/gnome/help/gnome-iconedit
-%{_applnkdir}/Graphics/*
+%{_datadir}/idl/*.idl
 %{_pixmapsdir}/gnome-iconedit
+%{_applnkdir}/Graphics/*
