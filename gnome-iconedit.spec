@@ -27,8 +27,8 @@ enough features to create simple icons or cursors.
 
 %description -l pl
 GNOME-Iconedit to prosty edytor ikon dla ¶rodowiska GNOME. Nie jest
-tak potê¿ny jak wspania³y GIMP, ale mo¿e wystarczaj±co du¿o by
-tworzyæ proste ikony lub kursory.
+tak potê¿ny jak wspania³y GIMP, ale mo¿e wystarczaj±co du¿o by tworzyæ
+proste ikony lub kursory.
 
 %prep
 %setup -q
