@@ -15,6 +15,7 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
 %define		_applnkdir	%{_datadir}/applnk
+%define		_sysconfdir	/etc/X11/GNOME
 
 %description
 GNOME Icon Editor.
@@ -50,6 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
+%{_sysconfdir}/CORBA/servers/*
 %{_datadir}/gnome/help/gnome-iconedit
 %{_applnkdir}/Graphics/*
 %{_datadir}/pixmaps/gnome-iconedit
