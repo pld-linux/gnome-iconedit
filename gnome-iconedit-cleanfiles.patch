@@ -1,0 +1,10 @@
+--- gnome-iconedit-1.0.6/src/Makefile.am~	Tue Feb  8 02:45:27 2000
++++ gnome-iconedit-1.0.6/src/Makefile.am	Sun Nov 25 09:45:34 2001
+@@ -20,7 +20,6 @@
+ 	Iconedit-skels.c	\
+ 	Iconedit-common.c	
+ 
+-CLEANFILES += $(CORBA_GENERATED)
+ BUILT_SOURCES = $(CORBA_GENERATED)
+ 
+ $(CORBA_GENERATED) : $(top_srcdir)/idl/Iconedit.idl

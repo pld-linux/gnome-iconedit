@@ -1,0 +1,10 @@
+--- gnome-iconedit-1.0.6/configure.in~	Thu Feb 24 18:27:28 2000
++++ gnome-iconedit-1.0.6/configure.in	Sun Nov 25 10:32:07 2001
+@@ -85,6 +85,5 @@
+ idl/Makefile
+ src/Makefile
+ src/widgets/Makefile
+-pixmaps/Makefile
+-macros/Makefile] 
++pixmaps/Makefile]
+ )

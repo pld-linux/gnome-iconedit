@@ -8,6 +8,8 @@ Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
 Source0:	http://www.abdn.ac.uk/~u07ih/gnome-iconedit/%{name}-%{version}.tar.gz
 Patch0:		%{name}-gdk_pixbuf.patch
+Patch1:		%{name}-cleanfiles.patch
+Patch2:		%{name}-macros.patch
 URL:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/
 Buildrequires:	autoconf
 Buildrequires:	automake
@@ -28,7 +30,9 @@ enough features to create simple icons or cursors.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 gettextize --copy --force
