@@ -55,3 +55,15 @@ diff -Nru gnome-iconedit-1.0.6/src/grid.c gnome-iconedit-1.0.6.new/src/grid.c
  				     w, h, w * 4,
  				     NULL, NULL);
  
+--- gnome-iconedit-1.0.6/src/Makefile.am~	Sun Nov 25 10:32:51 2001
++++ gnome-iconedit-1.0.6/src/Makefile.am	Sun Nov 25 10:45:17 2001
+@@ -12,7 +12,8 @@
+  -I$(includedir)\
+  -I$(top_srcdir) \
+  -I$(top_srcdir)/src/widgets \
+- $(GNOME_INCLUDEDIR)
++ $(GNOME_INCLUDEDIR) \
++ $(GDK_PIXBUF_CFLAGS)
+ 
+ CORBA_GENERATED = 		\
+ 	Iconedit.h		\
