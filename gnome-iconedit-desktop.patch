@@ -1,5 +1,5 @@
---- gnome-iconedit-1.2.0/gnome-iconedit.desktop.orig	Thu Mar  9 14:22:25 2000
-+++ gnome-iconedit-1.2.0/gnome-iconedit.desktop	Wed Dec 17 20:54:09 2003
+--- gnome-iconedit-1.0.6/gnome-iconedit.desktop.orig	Thu Mar  9 14:22:25 2000
++++ gnome-iconedit-1.0.6/gnome-iconedit.desktop	Wed Dec 17 20:54:09 2003
 @@ -1,15 +1,21 @@
  [Desktop Entry]
  Name=GNOME Icon Editor 
