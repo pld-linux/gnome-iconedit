@@ -1,7 +1,7 @@
 Summary:	GNOME Icon Editor
 Name:		gnome-iconedit
 Version:	1.0.6
-Release:	1
+Release: 2
 License:	GPL
 Group:		X11/Applications/Graphics
 Group(pl):	X11/Aplikacje/Grafika
@@ -9,7 +9,7 @@ Source0:	http://www.abdn.ac.uk/~u07ih/gnome-iconedit/%{name}-%{version}.tar.gz
 Patch0:		gnome-iconedit-gdk_pixbuf.patch
 URL:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/
 Buildrequires:	gdk-pixbuf-devel >= 0.7.0
-Buildrequires:	libpng-devel
+BuildRequires:	libpng >= 1.0.8
 Buildrequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
