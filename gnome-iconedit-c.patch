@@ -1,0 +1,10 @@
+--- gnome-iconedit-1.0.6/src/palette.c.orig	Fri Jan 21 16:32:54 2000
++++ gnome-iconedit-1.0.6/src/palette.c	Fri Jul  4 16:03:30 2003
+@@ -262,7 +262,6 @@
+ 			   new_colours);
+ }
+ 
+-static 
+ static void
+ ie_get_palette (GdkPixbuf *pixbuf,
+ 		GtkPalette *palette)
