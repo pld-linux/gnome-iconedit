@@ -1,10 +1,10 @@
 Summary:	GNOME Icon Editor
 Name:		gnome-iconedit
-Version:	1.0.0
+Version:	1.0.5
 Release:	1
 License:	GPL
-Group:		X11/Graphics
-######		Unknown group!
+Group:		X11/Applications/Graphics
+Group(pl):	X11/Aplikacje/Grafika
 Source:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/%{name}-%{version}.tar.gz
 Patch:		gnome-iconedit-applnk.patch
 URL:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/
