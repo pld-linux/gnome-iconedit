@@ -55,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/CORBA/servers/*
 %{_datadir}/gnome/help/gnome-iconedit
 %{_applnkdir}/Graphics/*
-%{_datadir}/pixmaps/gnome-iconedit
+%{_pixmapsdir}/gnome-iconedit
