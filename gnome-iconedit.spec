@@ -1,5 +1,5 @@
 Summary:	GNOME Icon Editor
-Summary(pl.UTF-8):   Edytor ikon dla GNOME
+Summary(pl.UTF-8):	Edytor ikon dla GNOME
 Name:		gnome-iconedit
 Version:	1.0.6
 Release:	7
