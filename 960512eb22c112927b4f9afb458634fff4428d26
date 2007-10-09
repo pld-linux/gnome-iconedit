@@ -1,0 +1,3 @@
+- release 5,
+- regenerate am/ac files for allow build in automake > 1.4 environment,
+- rebuild on new gnome-libs linked with audiofile 0.2.1.
