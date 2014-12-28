@@ -16,7 +16,7 @@ URL:		http://www.abdn.ac.uk/~u07ih/gnome-iconedit/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gdk-pixbuf-devel >= 0.7.0
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libpng-devel >= 1.0.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
